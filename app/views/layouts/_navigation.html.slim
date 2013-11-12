@@ -1,3 +1,6 @@
 = link_to "resapi", root_path, :class => 'brand'
+ul.nav
+	li class=('active' if is_active?(ingredients_path))
+		= link_to "My Ingredients", ingredients_path
 span.tagline
 	| Cookin' up APIs

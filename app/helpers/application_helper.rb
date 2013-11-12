@@ -10,6 +10,10 @@ module ApplicationHelper
 			nil
 		end
 	end
+
+	def is_active?(path)
+		request.path.include? path
+	end
 end
 
 class String

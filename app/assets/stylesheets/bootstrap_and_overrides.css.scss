@@ -1,3 +1,13 @@
 @import "bootstrap";
 body { padding-top: 60px; }
 @import "bootstrap-responsive";
+
+.navbar .brand {
+	color: #FFFFFF;
+	text-shadow: 0 0 4px #545454;
+	&:hover {
+		// text-shadow: 0 0 10px #333;
+		// color: #ccc;
+		// text-shadow: none;
+	}
+}

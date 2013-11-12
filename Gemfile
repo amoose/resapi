@@ -28,7 +28,7 @@ gem 'zip'
 
 group :development do
   # this has dependency conflicts with pry/pry-nav
-  # gem 'better_errors' 
+  gem 'better_errors' 
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'haml-rails'
   gem 'haml2slim'

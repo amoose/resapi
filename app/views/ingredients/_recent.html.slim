@@ -1,0 +1,9 @@
+h2
+	| Recently created APIs
+- @recent_ingredients.each do |ingredient|
+	= ingredient.try(:name)
+
+
+- if @recent_ingredients.empty?
+	p
+		| There are currently <u>no</u> recently created APIs.

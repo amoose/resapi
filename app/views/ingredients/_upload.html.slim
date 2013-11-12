@@ -1,0 +1,9 @@
+h1
+	| Upload your dataset..
+
+= form_for(@ingredient) do |f|
+	/ # = f.text_field :name
+
+	= f.submit "Submit"
+
+	=debug @ingredient
