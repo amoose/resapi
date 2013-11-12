@@ -1,0 +1,2 @@
+Fabricator(:ingredient) do
+end

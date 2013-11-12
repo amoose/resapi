@@ -9,10 +9,7 @@ Cooking up APIs in minutes from various data sources.
   - Instantly begin querying and searching your API. 
   - Launch your own instance! Pull down the repo, spin up EC2 and go nuts!
 
-> NCES school data is currently posted to Data.gov on an 
-> annual basis. Search engines and users alike need the
-> ability to find NCES data on schools quickly and easily.
-
+Inspired by [DataBeam](https://github.com/philipashlock/DataBeam) and the [Presidential Innovation Fellows](http://www.whitehouse.gov/innovationfellows).
 
 ## The Plan
   - Accept various types files

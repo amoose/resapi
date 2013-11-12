@@ -3,9 +3,10 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.0'
 
-gem 'mongoid', '~> 4', :github=>'mongoid/mongoid'   # must be listed before geocoder
+gem 'mongoid', '~> 4', :github=>'mongoid/mongoid'
 
 gem 'bootstrap-sass'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'figaro'
 gem 'geocoder'
@@ -13,6 +14,8 @@ gem 'httparty'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-rails'
 gem 'json'
+gem 'mini_magick', :git => 'git://github.com/probablycorey/mini_magick.git'
+gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
 gem 'redis'
 gem 'resque', '~> 2.0.0.pre.1', github: 'resque/resque'
 gem 'roo'
@@ -27,13 +30,11 @@ group :development do
   # this has dependency conflicts with pry/pry-nav
   # gem 'better_errors' 
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
-  gem 'capistrano-rails'
   gem 'haml-rails'
   gem 'haml2slim'
   gem 'html2haml'
   gem 'hub', :require=>nil
   gem 'quiet_assets'
-  gem 'rvm-capistrano'
 end
 
 group :development, :test do
