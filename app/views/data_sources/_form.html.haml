@@ -1,0 +1,19 @@
+= simple_form_for(@data_source) do |f|
+  = f.error_notification
+
+  - if @data_source.errors.any?
+    %div.alert.alert-error
+      - @data_source.errors.messages.each do |message|
+        %span= message[0].to_s.titleize
+        %span= message[1][0].to_s
+        %br
+
+  .form-inputs
+    = f.label :name
+    = f.text_field :name
+
+    = f.label :data_file
+    = f.file_field :data_file
+
+  .form-actionss
+    = f.button :submit

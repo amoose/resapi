@@ -1,4 +1,4 @@
-NcesLookup::Application.configure do
+Resapi::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -37,4 +37,5 @@ NcesLookup::Application.configure do
   # Send email in development mode.
   config.action_mailer.perform_deliveries = true
 
+  config.middleware.delete Rack::Lock
 end

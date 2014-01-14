@@ -1,0 +1,17 @@
+
+
+%ul
+	%li= @data_source.name
+	- if @data_source.data_file
+		%li= link_to 'Download', @data_source.data_file.to_s
+
+- if @data_source.errors
+	- @data_source.errors.each do |error|
+		%p.error= error.message
+		
+= link_to 'Edit', edit_data_source_path(@data_source)
+\|
+= link_to 'Back', data_sources_path
+
+%hr
+= debug @data_source

@@ -13,5 +13,19 @@ ADMIN_NAME: First User
 ADMIN_EMAIL: user@example.com
 ADMIN_PASSWORD: changeme
 
-NCES_IMPORT_DIR: lib/tasks/nces-data
-NCES_IMPORT_API: https://explore.data.gov/api/views/ykv5-fn9t/rows.json?max_rows=1
+S3_BUCKET_NAME: resapi
+S3_ACCESS_KEY: AKIAJKAO355ZPL42RIIQ
+S3_SECRET_ACCESS_KEY: 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
+
+
+TWITTER_KEY: 
+TWITTER_SECRET:
+
+GITHUB_KEY: 6f14c19cb28405842827
+GITHUB_SECRET: 901854c4125aa76d899c772ab16879c0d04c1ce0
+
+REDIS_HOST: localhost:6379
+
+TEMP_DIR: tmp
+
+AWS_S3_BUCKET: http://resapi.s3.amazonaws.com

@@ -10,4 +10,4 @@ unless res.include?("redis-server") && res.include?("#{Rails.env}.conf")
   raise "Couldn't start redis"
 end
 
-REDIS = Redis.new(:port => port)
+$redis = Redis::Namespace.new("resapi", :redis => Redis.new)

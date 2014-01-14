@@ -2,14 +2,14 @@ doctype html
 html
   head
     meta content="width=device-width, initial-scale=1.0" name="viewport" 
-      title= content_for?(:title) ? yield(:title) : "Nces Lookup"
-      meta content=(content_for?(:description) ? yield(:description) : "Nces Lookup") name="description" 
+      title= content_for?(:title) ? yield(:title) : "resapi.org"
+      meta content=(content_for?(:description) ? yield(:description) : "resapi.org") name="description" 
         = stylesheet_link_tag "application", :media => "all"
         = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Scada:400,700|Cardo:400,700"
         = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
-  body class=("#{controller_name} #{action_name}") 
+  body class=("#{controller_name} #{action_name}") data-party_id=("#{@party_id}")
     .navbar.navbar-fixed-top
       nav.navbar-inner
         .container
@@ -24,3 +24,23 @@ html
           footer
       /! ! end of .container
     /! ! end of #main
+
+
+javascript:
+  var party_id = $('body').data('party_id');
+  $(function() {
+    // $.deck('.slide');
+
+    var dispatcher = new WebSocketRails('localhost:5000/websocket');
+
+    // subscribe to the channel
+    var channel = dispatcher.subscribe('party_'+presentation_id);
+
+    console.log(channel)
+    // bind to a channel event
+    channel.bind('party_'+presentation_id, function(data) {
+      console.log('channel event received: ' + data);
+      //$('.debug').append(data)
+      //$('#goto-slide').val(data.slide)
+    });
+  })

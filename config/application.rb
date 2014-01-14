@@ -12,7 +12,7 @@ require "mongoid/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-module NcesLookup
+module Resapi
   class Application < Rails::Application
 
     # don't generate RSpec tests for views and helpers

@@ -1,8 +1,8 @@
 class ImageUploader < CarrierWave::Uploader::Base
 
   include CarrierWave::MiniMagick
-  include Sprockets::Helpers::RailsHelper
-  include Sprockets::Helpers::IsolatedHelper
+  # include Sprockets::Helpers::RailsHelper
+  # include Sprockets::Helpers::IsolatedHelper
 
   storage :grid_fs
 
@@ -21,4 +21,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     asset_path("fallback/" + [version_name, "default-photo.png"].compact.join('_'))
   end
 
+  def extension_white_list
+    %w(jpg jpeg gif png)
+  end
 end

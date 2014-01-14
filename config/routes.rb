@@ -1,6 +1,6 @@
 require 'api_constraints'
 
-NcesLookup::Application.routes.draw do
+Resapi::Application.routes.draw do
 
 	root :to => 'home#index'
 
@@ -13,9 +13,10 @@ NcesLookup::Application.routes.draw do
 	resources :ingredients
 	resources :data_sources
 
+	get '/auth/:provider/callback' => 'sessions#create'
+  get '/signin' => 'sessions#new', :as => :signin
+  get '/signout' => 'sessions#destroy', :as => :signout
+  get '/auth/failure' => 'sessions#failure'
 
-	match "create" => "home#create", via: [:post]
-	
-	match "/images/uploads/*path" => "gridfs#serve", via: [:get, :post]
-
+  # mount Resque::Server, :at => "/resque"
 end
