@@ -1,0 +1,22 @@
+/ <%= form_for @article, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+/   <%= f.text_field :title %>
+/   <%= f.text_area :body, size: "60x12" %>
+/   <%= f.submit "Create" %>
+/ <% end %>
+/ f.file_field :profile_photo
+
+
+/# = form_for @ingredient, url:{ action: "create" }, html: {class: "nifty_form"} do |f|
+	/ = f.text_field :name
+
+/ = form_for [@data_source, @data_source_types], html: { class: "nifty_form" } do |f|
+/ 	= f.select :data_source_type
+
+/ 	= f.submit "Create"
+
+
+h1
+	| Upload your dataset..
+
+
+/ = form_for @ingredient do |f|

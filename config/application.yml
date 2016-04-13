@@ -1,0 +1,31 @@
+# Add account credentials and API keys here.
+# See http://railsapps.github.io/rails-environment-variables.html
+# This file should be listed in .gitignore to keep your settings secret!
+# Each entry sets a local environment variable and overrides ENV variables in the Unix shell.
+# For example, setting:
+# GMAIL_USERNAME: Your_Gmail_Username
+# makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
+# Add application configuration variables here, as shown below.
+#
+GMAIL_USERNAME: Your_Username
+GMAIL_PASSWORD: Your_Password
+ADMIN_NAME: First User
+ADMIN_EMAIL: user@example.com
+ADMIN_PASSWORD: changeme
+
+S3_BUCKET_NAME: resapi
+S3_ACCESS_KEY: AKIAINUI5VSCJNBBI3SQ
+S3_SECRET_ACCESS_KEY: o4LTWzWlLgZNnXzitn90N6Gr0OOSumf4AgkIPqYH
+
+
+TWITTER_KEY: 
+TWITTER_SECRET:
+
+GITHUB_KEY: 6f14c19cb28405842827
+GITHUB_SECRET: 901854c4125aa76d899c772ab16879c0d04c1ce0
+
+REDIS_HOST: localhost:6379
+
+TEMP_DIR: tmp
+
+AWS_S3_BUCKET: http://resapi.s3.amazonaws.com

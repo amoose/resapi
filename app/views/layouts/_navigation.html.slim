@@ -1,0 +1,16 @@
+= link_to "resapi", root_path, :class => 'brand'
+ul.nav
+	li class=('active' if is_active?(ingredients_path))
+		= link_to "Ingredients", ingredients_path
+	li class=('active' if is_active?(data_sources_path))
+		= link_to "Data Sources", data_sources_path
+
+span.tagline
+	| Cookin' up APIs
+	
+ul.nav.pull-right
+	li
+		- if user_signed_in?
+			= link_to "Sign out", signout_path
+		- else
+			= link_to 'Login', signin_path, { 'data-no-turbolink' => true }
